@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
+	fmt.Println(AppName())
+
 	fmt.Println(animals.ElephantFood())
 	fmt.Println(animals.MonkeyFood())
 	fmt.Println(animals.RabbitFood())
