@@ -27,4 +27,14 @@ func main() {
 	case 2, 4, 6, 8, 10:
 		fmt.Printf("%d is even\n", n)
 	}
+
+	var x interface{} = 3
+	i := x.(int)
+	// f := x.(float64)
+	_,isFloat64 := x.(float64)
+
+	fmt.Println(i)
+	// fmt.Println(f)
+	fmt.Println(isFloat64)
 }
+
