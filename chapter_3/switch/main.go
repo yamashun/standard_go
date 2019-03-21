@@ -29,12 +29,19 @@ func main() {
 	}
 
 	var x interface{} = 3
-	i := x.(int)
+	// i := x.(int)
 	// f := x.(float64)
-	_,isFloat64 := x.(float64)
+	// 2つの変数を代入するような形式で書くことで2番目の変数にアサーションの結果が入る
 
-	fmt.Println(i)
-	// fmt.Println(f)
-	fmt.Println(isFloat64)
+	switch x.(type) {
+	case bool:
+		fmt.Println("bool")
+	case int, uint:
+		fmt.Println("integer or unsigned integer")
+	case string:
+		fmt.Println("string")
+	default:
+		fmt.Println("don't know")
+	}
 }
 
