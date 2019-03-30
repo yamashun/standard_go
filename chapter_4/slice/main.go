@@ -19,4 +19,13 @@ func main() {
 
 	fmt.Println(len(s2))
 	fmt.Println(cap(s2))
+
+	// 管理スライス式
+	a := [5]int{1, 2, 3, 4, 5}
+	s3 := a[0:2]
+	fmt.Println(s3)
+
+	// append
+	s = append(s, 1)
+	fmt.Println(s)
 }
