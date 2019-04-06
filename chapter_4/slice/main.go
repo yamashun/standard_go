@@ -59,10 +59,25 @@ func main() {
 	// pow2(b)
 	// fmt.Println(b)
 
-	a := [5]int{1, 2, 3, 4, 5}
-	s := a[0:2]
-	fmt.Println(len(s))
-	fmt.Println(cap(s))
+	// a := [5]int{1, 2, 3, 4, 5}
+	// s := a[0:2]
+	// fmt.Println(len(s))
+	// fmt.Println(cap(s))
+	// a[1] = 0
+	// fmt.Println(s)
+
+	a := [3]int{1, 2, 3}
+	s := a[:]
+	fmt.Println(s)
+
+	// appendで自動拡張されない場合は、もとの配列を参照したまま
+	x := a[0:2]
+	x = append(x, 4)
 	a[1] = 0
 	fmt.Println(s)
+
+	// appendで自動拡張される場合、元の配列とは異なる新たに確保されたメモリ領域を参照
+	y := append(s, 4)
+	a[0] = 9
+	fmt.Println(y)
 }
