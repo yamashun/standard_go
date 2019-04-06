@@ -50,12 +50,19 @@ func main() {
 	// fmt.Println(s)
 
 	// 配列は値渡し
-	a:= [3]int{1, 2, 3}
-	pow(a)
-	fmt.Println(a)
+	// a:= [3]int{1, 2, 3}
+	// pow(a)
+	// fmt.Println(a)
 
-	// sliceは参照渡し
-	b:= []int{1, 2, 3}
-	pow2(b)
-	fmt.Println(b)
+	// // sliceは参照渡し
+	// b:= []int{1, 2, 3}
+	// pow2(b)
+	// fmt.Println(b)
+
+	a := [5]int{1, 2, 3, 4, 5}
+	s := a[0:2]
+	fmt.Println(len(s))
+	fmt.Println(cap(s))
+	a[1] = 0
+	fmt.Println(s)
 }
