@@ -5,7 +5,11 @@ import (
 )
 
 func main() {
-	m := map[int]string{1: "Taro", 2: "Hanako", 3:"Jiro"}
+	m := map[int]string{1: "A", 2: "B", 3: "C"}
 
-	fmt.Println(m)
+	s := m[1]
+	s2 := m[9]
+
+	fmt.Println(s)
+	fmt.Println(s2)
 }
