@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
+func inc(p *int) {
+	*p++
+}
+
 func main() {
-	var i int
-	p := &i
-	i = 5
-
-	fmt.Println(*p)
-
-	*p = 10
+	i := 1
+	inc(&i)
+	inc(&i)
+	inc(&i)
 	fmt.Println(i)
 }
