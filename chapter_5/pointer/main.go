@@ -22,4 +22,8 @@ func main() {
 	p[2] = "Grape"
 	fmt.Println(a[2])
 	fmt.Println(p[2])
+
+	i := 5
+	ip := &i
+	fmt.Printf("type=%T, address=%p\n", ip, ip)
 }
