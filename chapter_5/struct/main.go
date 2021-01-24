@@ -11,6 +11,16 @@ type (
 	IntsChannel chan []int
 )
 
+type Callback func(i int) int
+
+func Sum(ints []int, callback Callback) int {
+	var sum int
+	for _, i := range ints {
+		sum += i
+	}
+	return callback(sum)
+}
+
 func main() {
 	var n1 MyInt = 5
 	n2 := MyInt(7)
@@ -24,4 +34,13 @@ func main() {
 	fmt.Println(pairt)
 	fmt.Println(strs)
 	fmt.Println(amap)
+
+	n := Sum(
+		[]int{1, 2, 3, 4, 5},
+		func(i int) int {
+			return i * 2
+		},
+	)
+
+	fmt.Println(n)
 }
