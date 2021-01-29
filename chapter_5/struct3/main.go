@@ -13,8 +13,8 @@ func swap(p *Point) {
 }
 
 func main() {
-	p := Point{X: 1, Y: 2}
-	swap(&p)
+	p := &Point{X: 1, Y: 2}
+	swap(p)
 
 	fmt.Println(p.X)
 	fmt.Println(p.Y)
