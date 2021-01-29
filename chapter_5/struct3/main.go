@@ -18,4 +18,12 @@ func main() {
 
 	fmt.Println(p.X)
 	fmt.Println(p.Y)
+
+	p2 := new(Point)
+	p2.X = 1
+	p2.Y = 3
+	swap(p2)
+
+	fmt.Println(p2.X)
+	fmt.Println(p2.Y)
 }
