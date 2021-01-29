@@ -12,6 +12,10 @@ type Animal struct {
 	Feed
 }
 
+func showStruct(s struct{ X, Y int }) {
+	fmt.Println(s)
+}
+
 func main() {
 	a := Animal{
 		Name: "Monkey",
@@ -28,4 +32,7 @@ func main() {
 
 	a.Feed.Amount = 15
 	fmt.Println(a.Feed.Amount)
+
+	s := struct{ X, Y int }{X: 1, Y: 2}
+	showStruct(s)
 }
