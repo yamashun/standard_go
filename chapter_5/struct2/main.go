@@ -9,7 +9,7 @@ type Feed struct {
 
 type Animal struct {
 	Name string
-	Feed Feed
+	Feed
 }
 
 func main() {
@@ -24,6 +24,7 @@ func main() {
 	fmt.Println(a.Name)
 	fmt.Println(a.Feed.Name)
 	fmt.Println(a.Feed.Amount)
+	fmt.Println(a.Amount)
 
 	a.Feed.Amount = 15
 	fmt.Println(a.Feed.Amount)
